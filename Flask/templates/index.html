@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Nombre de mascotas {% endblock %}</h1>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">EDAD</th>
+            
+          </tr>
+        </thead>
+        
+        <tbody>
+            {% for mascotas in mascota %}
+          <tr>
+            <th scope="row">{{ mascotas['id'] }}</th>
+            <td>{{ mascotas['nombre'] }}</td>
+            <td>{{ mascotas['edad'] }}</td>
+          </tr>
+          {% endfor %}
+         
+        </tbody>
+
+      </table>
+        <hr>
+
+        
+    
+{% endblock %}
